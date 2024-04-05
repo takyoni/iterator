@@ -24,10 +24,10 @@
     <ClCompile Include="./FileSystems/NTFS/NTFS.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="NTFSIterator.cpp">
+    <ClCompile Include="./Iterators/NTFSIterator/NTFSIterator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Cluster.cpp">
+    <ClCompile Include="./Iterators/IteratorItem/Cluster.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,13 +38,13 @@
     <ClInclude Include="./FileSystems/NTFS/NTFS.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Iterator.h">
+    <ClInclude Include="./Iterators/BaseIterator/Iterator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="NTFSIterator.h">
+    <ClInclude Include="./Iterators/NTFSIterator/NTFSIterator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Cluster.h">
+    <ClInclude Include="./Iterators/IteratorItem/Cluster.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

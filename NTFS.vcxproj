@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)FileSystems\NTFS;$(SolutionDir)FileSystems\BaseFS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)FileSystems\NTFS;$(SolutionDir)Iterators\NTFSIterator;$(SolutionDir)Iterators\BaseIterator;$(SolutionDir)Iterators\IteratorItem;$(SolutionDir)FileSystems\BaseFS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,17 +130,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="./FileSystems/BaseFS/FS.cpp" />
-    <ClCompile Include="Cluster.cpp" />
+    <ClCompile Include="./Iterators/IteratorItem/Cluster.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="./FileSystems/NTFS/NTFS.cpp" />
-    <ClCompile Include="NTFSIterator.cpp" />
+    <ClCompile Include="./Iterators/NTFSIterator/NTFSIterator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="./FileSystems/BaseFS/FS.h" />
     <ClInclude Include="./FileSystems/NTFS/NTFS.h" />
-    <ClInclude Include="Cluster.h" />
-    <ClInclude Include="Iterator.h" />
-    <ClInclude Include="NTFSIterator.h" />
+    <ClInclude Include="./Iterators/IteratorItem/Cluster.h" />
+    <ClInclude Include="./Iterators/BaseIterator/Iterator.h" />
+    <ClInclude Include="./Iterators/NTFSIterator/NTFSIterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
