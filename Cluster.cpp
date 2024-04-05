@@ -2,17 +2,13 @@
 #include <iostream>
 using namespace std;
 
-char Cluster::Print()
-{
-    return content[0];
-}
-
 Cluster::~Cluster()
 {
     delete[] content;
 }
 
-Cluster::Cluster(unsigned int clusterSize)
+Cluster::Cluster(BYTE* data, unsigned int num)
 {
-    content = new BYTE[clusterSize];
+    clusterNum = num;
+    content = data;
 }

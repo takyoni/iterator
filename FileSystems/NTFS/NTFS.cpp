@@ -11,7 +11,7 @@ bool NTFS::ReadClusterSize()
     DWORD bytesRead;
     DWORD bytesToRead = sizeof(sector);
 
-    LARGE_INTEGER sectorSizeOffset;
+    LARGE_INTEGER sectorSizeOffset{};
     sectorSizeOffset.QuadPart = 0;
 
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
@@ -33,9 +33,4 @@ bool NTFS::ReadClusterSize()
     clusterCount = countSectors / sectorsPerCluster;
     return true;
 }
-
-/*Iterator<Cluster>* NTFS::GetIterator()
-{
-    return new NTFSIterator(
-}*/
 

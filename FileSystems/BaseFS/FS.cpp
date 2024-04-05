@@ -23,26 +23,26 @@ bool FS::Init(LPCWSTR fileName) {
     }
     return true;
 }
-Cluster* FS::ReadCluster(unsigned int clusterNum)
+Cluster FS::ReadCluster(unsigned int clusterNum)
 {
     DWORD bytesRead;
     DWORD bytesToRead = clusterSize;
     LARGE_INTEGER sectorSizeOffset;
     sectorSizeOffset.QuadPart = clusterNum * clusterSize; // Смещение для размера сектора
-    Cluster* clusterData = new Cluster(clusterSize);
+    BYTE* arr = new BYTE[clusterSize];
     // Устанавливаем смещение
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
         throw std::invalid_argument("Set FilePointer error");
         CloseHandle(fileHandler);
 //        return false;
     }
-    BYTE* asd = clusterData->GetContent();
-    if (!ReadFile(fileHandler, asd, clusterSize, &bytesRead, NULL))
+    if (!ReadFile(fileHandler, arr, clusterSize, &bytesRead, NULL))
     {
         throw std::invalid_argument("ReadFile error");
         CloseHandle(fileHandler);
 //        return false;
     }
+    Cluster clusterData(arr, clusterNum);
     return clusterData;
 }
 bool FS::ReadClusterSize()

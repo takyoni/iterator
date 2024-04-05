@@ -19,10 +19,7 @@ private:
 	} BootRecord;
 	#pragma pack(pop)
 protected:
-	// В разных ФС различается только процесс получения размера кластера
 	bool ReadClusterSize();
-//public:
-//	Iterator<Cluster>* GetIterator();
 
 };
 

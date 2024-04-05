@@ -6,12 +6,12 @@ using namespace std;
 class Cluster
 {
 private:
-	unsigned int clusterSize;
+	unsigned int clusterNum;
 	BYTE* content;
 public:
-	char Print();
 	BYTE* GetContent() { return content; };
+	unsigned int GetNum() const { return clusterNum; };
+	Cluster(BYTE* data, unsigned int num);
 	~Cluster();
-	Cluster(unsigned int clusterSize);
 };
 

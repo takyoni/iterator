@@ -2,7 +2,7 @@
 #include "Iterator.h"
 #include "NTFS.h"
 class NTFSIterator :
-    public Iterator<Cluster*>
+    public Iterator<Cluster>
 {
 private:
     NTFS* ntfs;
@@ -17,6 +17,6 @@ public:
     void First() { Cursor = 0; }
     void Next() { Cursor ++; }
     bool IsDone() const { return (Cursor >= Count); }
-    Cluster* GetCurrent();
+    Cluster GetCurrent();
 };
 

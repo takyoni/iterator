@@ -24,21 +24,6 @@
     <ClCompile Include="./FileSystems/NTFS/NTFS.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="./FileSystems/FAT16/FAT16.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="./FileSystems/HFS+/HFS+.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="./FileSystems/ExFAT/EFAT.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="./FABRIC/MyFSC/MyFSC.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Iterator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="NTFSIterator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -51,21 +36,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="./FileSystems/NTFS/NTFS.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="./FileSystems/FAT16/FAT16.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="./FileSystems/HFS+/HFS+.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="./FileSystems/ExFAT/EFAT.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="./FABRIC/BaseClass/FileSystemCreator.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="./FABRIC/MyFSC/MyFSC.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Iterator.h">

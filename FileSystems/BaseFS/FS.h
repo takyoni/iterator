@@ -10,7 +10,7 @@ protected:
 	virtual bool ReadClusterSize();
 public:
 	bool Init(LPCWSTR);
-	Cluster* ReadCluster(unsigned int);
+	Cluster ReadCluster(unsigned int);
 	unsigned int ClusterSize() const { return clusterSize; };
 	unsigned int ClusterCount() const { return clusterCount; };
 	virtual ~FS();

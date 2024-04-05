@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)FileSystems\FAT16;$(SolutionDir)FileSystems\ExFAT;$(SolutionDir)FABRIC\MyFSC;$(SolutionDir)FABRIC\BaseClass;$(SolutionDir)FileSystems\NTFS;$(SolutionDir)FileSystems\HFS+;$(SolutionDir)FileSystems\BaseFS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)FileSystems\NTFS;$(SolutionDir)FileSystems\BaseFS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,24 +129,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="./FileSystems/ExFAT/EFAT.cpp" />
-    <ClCompile Include="./FileSystems/FAT16/FAT16.cpp" />
     <ClCompile Include="./FileSystems/BaseFS/FS.cpp" />
-    <ClCompile Include="./FileSystems/HFS+/HFS+.cpp" />
     <ClCompile Include="Cluster.cpp" />
-    <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="./FABRIC/MyFSC/MyFSC.cpp" />
     <ClCompile Include="./FileSystems/NTFS/NTFS.cpp" />
     <ClCompile Include="NTFSIterator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="./FileSystems/ExFAT/EFAT.h" />
-    <ClInclude Include="./FileSystems/FAT16/FAT16.h" />
-    <ClInclude Include="./FABRIC/BaseClass/FileSystemCreator.h" />
     <ClInclude Include="./FileSystems/BaseFS/FS.h" />
-    <ClInclude Include="./FileSystems/HFS+/HFS+.h" />
-    <ClInclude Include="./FABRIC/MyFSC/MyFSC.h" />
     <ClInclude Include="./FileSystems/NTFS/NTFS.h" />
     <ClInclude Include="Cluster.h" />
     <ClInclude Include="Iterator.h" />
