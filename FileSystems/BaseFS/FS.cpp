@@ -23,12 +23,12 @@ bool FS::Init(LPCWSTR fileName) {
     }
     return true;
 }
-Cluster FS::ReadCluster(unsigned int clusterNum)
+void FS::ReadCluster(Cluster* item, unsigned int clusterNum)
 {
     DWORD bytesRead;
     DWORD bytesToRead = clusterSize;
     LARGE_INTEGER sectorSizeOffset;
-    sectorSizeOffset.QuadPart = clusterNum * clusterSize; // Смещение для размера сектора
+    sectorSizeOffset.QuadPart = static_cast<LONGLONG>(clusterNum) * clusterSize; // Смещение для размера сектора
     BYTE* arr = new BYTE[clusterSize];
     // Устанавливаем смещение
     if (!SetFilePointerEx(fileHandler, sectorSizeOffset, NULL, FILE_BEGIN)) {
@@ -42,8 +42,9 @@ Cluster FS::ReadCluster(unsigned int clusterNum)
         CloseHandle(fileHandler);
 //        return false;
     }
-    Cluster clusterData(arr, clusterNum);
-    return clusterData;
+    item->SetClusterNum(clusterNum);
+    item->SetContent(arr);
+    //delete[] arr;
 }
 bool FS::ReadClusterSize()
 {
