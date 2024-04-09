@@ -20,6 +20,5 @@ private:
 	#pragma pack(pop)
 protected:
 	bool ReadClusterSize();
-
 };
 

@@ -3,6 +3,7 @@
 #include <iostream>
 #include "windows.h"
 #include "stdio.h"
+#include "NTFSIterator.h"
 using namespace std;
 
 bool NTFS::ReadClusterSize()
@@ -33,4 +34,3 @@ bool NTFS::ReadClusterSize()
     clusterCount = countSectors / sectorsPerCluster;
     return true;
 }
-

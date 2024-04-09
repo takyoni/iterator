@@ -2,5 +2,7 @@
 
 Cluster NTFSIterator::GetCurrent()
 {
-    return ntfs->ReadCluster(Cursor);
+    Cluster* item = new Cluster();
+    ntfs->ReadCluster(item, Cursor);
+    return *item;
 }
